@@ -1,0 +1,13 @@
+Generate the full technical documentation suite for [APP_NAME] using everything in Project Knowledge.
+
+Create these exact sections as separate Markdown files / pages:
+
+1. API Documentation (OpenAPI-style table or Swagger-like for every endpoint/route + Supabase RLS rules).
+2. Development Principles & Coding Standards (naming, error handling, security, performance).
+3. Architecture Deep-Dive (with embedded Mermaid diagrams).
+4. Mobile / Responsive Strategy (PWA manifest, viewport, touch targets).
+5. Security & Compliance Checklist.
+
+Also generate a README.md that links everything.
+
+Create a new documentation section in the app called "/docs" with all of these pages (use Lovable’s documentation builder).
