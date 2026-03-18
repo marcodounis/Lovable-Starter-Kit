@@ -1,0 +1,11 @@
+Final step — add privacy controls and data monetisation features:
+
+- Clear toggle on profile: "Share anonymised location data for city insights" (opt-in only).
+- In admin, a "Generate Insights Report" button that creates aggregated CSV/PDF (top routes, peak times, no personal data).
+- Add a "Sell Reports" section in admin where I can export and later sell to tourism boards.
+- Full privacy policy page + consent banners.
+- Polish UI: modern map-first design, dark mode, mobile-responsive (PWA ready).
+
+Test that nothing breaks if location is off.
+
+Once this is done, the app will have correct models, full admin control, populated maps, and monetisation ready.
