@@ -1,0 +1,8 @@
+Now that the database exists, add full user authentication (email + password + magic link + Google), role-based access, and monetization.
+
+- Use Clerk or Supabase Auth.
+- Create a "Hunter Pass" user subscription flow ($4.99–$9.99/mo) and Business Pro plan ($99/mo).
+- Integrate Stripe for payments and webhooks (create products in Stripe: HunterPass monthly, BusinessPro monthly, etc.).
+- Add a simple subscription management page where users/businesses can upgrade, see status, and cancel.
+- Automatically set role = 'business_owner' when a user claims a Business record.
+- Enforce that only verified businesses can post Offers and sponsor Placards.
