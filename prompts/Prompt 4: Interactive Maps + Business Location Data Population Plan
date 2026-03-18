@@ -1,0 +1,19 @@
+Add interactive maps throughout the app using Mapbox GL JS (include the Mapbox component everywhere we need maps: home, hunts, admin).
+
+Implement this exact plan to populate business location data on the maps:
+
+1. City selector on first load (default Sydney, NSW).
+
+2. "Auto-populate businesses" button in Admin → Businesses tab that:
+   - Calls Google Places API (or Foursquare/OpenStreetMap fallback) for the selected city + categories (cafe, bar, museum, retail, etc.).
+   - Creates Business records with name, address, lat/lng, category.
+   - Shows results on map with markers; admin can bulk-verify or delete.
+
+3. Business claim flow: any user can search a business on the map → "Claim this location" → enters verification code or uploads proof → admin approves in /admin.
+
+4. Manual add in admin: CSV upload (columns: name, address, lat, lng, category) that geocodes missing lat/lng and creates records.
+
+5. Every Business, Placard, and active Offer shows as different colored markers on user maps.
+6. Add clustering and search box ("Find businesses near me").
+
+Store the Mapbox public key in environment variables. Make sure proximity queries (within X metres) use PostGIS ST_DWithin.
