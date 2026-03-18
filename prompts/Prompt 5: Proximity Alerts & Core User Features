@@ -1,0 +1,8 @@
+Now wire up the user-facing features on top of the existing models and maps:
+
+- Proximity alerts: when a user has location enabled, check every 30 seconds (or on map move) against active Messages/Offers within their radius and show push/notification + in-app alert.
+- Treasure map creator: drag-and-drop pins, add clues, save as TreasureHunt.
+- Historical placards: tap any map marker to show the card.
+- Business offers: show pop-up when near a business.
+- Private messaging with proximity trigger.
+- Make sure everything respects location_opt_in and "while using app" permission flow.
