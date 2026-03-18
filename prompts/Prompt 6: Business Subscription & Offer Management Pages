@@ -1,0 +1,8 @@
+Build the business-facing pages (only accessible to role = 'business_owner'):
+
+- /business/dashboard: show their offers, placards, visitor heatmap (aggregated), redemption stats.
+- /business/offers: create/edit offers with proximity radius slider.
+- /business/hunts: create sponsored treasure hunts.
+- Stripe billing portal link for their Pro subscription.
+
+Show clear ROI metrics ("X people walked past your door this week").
