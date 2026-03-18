@@ -1,0 +1,21 @@
+Build the complete Supabase/Postgres database schema for my location-based treasure-map app called "TreasureHunt". 
+
+Create these tables with all necessary fields, relationships (foreign keys), indexes, and PostGIS geography support for locations:
+
+1. Users (id, email, name, avatar, created_at, role: enum ['regular', 'business_owner', 'admin'], subscription_status: enum ['free', 'hunter_pass'], location_opt_in: boolean)
+
+2. Businesses (id, name, address, lat, lng, geography point, category, owner_user_id references Users, verified: boolean, created_at)
+
+3. HistoricalPlacards (id, title, description, lat, lng, geography point, venue_name, business_id references Businesses optional, sponsor_business_id references Businesses optional)
+
+4. Messages (id, from_user_id references Users, to_user_id references Users optional, to_business_id references Businesses optional, content text, lat, lng, geography point or radius_meters integer for proximity, expires_at, is_private: boolean, read: boolean)
+
+5. TreasureHunts (id, creator_user_id references Users, title, description, is_public: boolean, steps: jsonb array of {lat, lng, clue, completed_by_user_ids})
+
+6. Offers (id, business_id references Businesses, title, description, discount_code, discount_value, expires_at, redemption_count integer default 0, proximity_radius_meters integer)
+
+7. Subscriptions (id, user_id or business_id, plan_type: enum ['starter', 'pro', 'enterprise', 'hunter_pass'], stripe_subscription_id, status, amount, interval, starts_at, ends_at)
+
+8. AlertLogs (id, user_id, message_id or offer_id, triggered_at, distance_meters) for proximity tracking.
+
+Add RLS policies so users can only see their own messages/hunts, businesses can only edit their own offers/placards, and admins have full access. Enable real-time subscriptions on Messages and AlertLogs. Use geography type for all location fields so I can do efficient proximity queries later.
