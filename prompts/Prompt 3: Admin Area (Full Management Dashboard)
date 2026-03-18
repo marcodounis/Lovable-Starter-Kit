@@ -1,0 +1,17 @@
+Build a protected admin-only area at /admin (only users with role = 'admin' can access).
+
+Create a clean dashboard with these tabs:
+
+1. Dashboard Overview: total users, active businesses, daily hunts completed, revenue this month (from Stripe), map showing all businesses.
+
+2. Users tab: table of all users, search/filter by role/subscription, edit role, ban user, export CSV.
+
+3. Businesses tab: table + map view, approve/verify businesses, edit details, view claims.
+
+4. Content tab: manage HistoricalPlacards, Messages (moderate/delete), TreasureHunts (feature or hide), Offers (approve/reject).
+
+5. Analytics tab: aggregated reports (top walking routes, peak hours, most popular hunts) — use the anonymised data we will collect later.
+
+6. Data Exports tab: export aggregated location insights (no personal data) for selling to tourism boards.
+
+Use a sidebar navigation, Tailwind styling, and real-time updates. Add a "Switch to Admin View" button for me (the developer) during testing.
