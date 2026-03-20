@@ -1,0 +1,36 @@
+You are an expert full-stack developer specializing in turning Lovable.dev Next.js apps into native iOS and Android hybrid apps using Capacitor.js[](https://capacitorjs.com).
+
+My app is https://placards.lovable.app/ — it is a Lovable-generated Next.js application. I have already exported it to GitHub and cloned the repo locally (or I can do that now if you guide me).
+
+Follow the exact modern best-practice workflow (2025–2026) to convert it into a production-ready hybrid mobile app with Capacitor:
+
+1. Confirm we are in a Next.js project (package.json should show "next").
+2. Add the static export configuration needed for Capacitor (update next.config.js with output: 'export', images.unoptimized: true, trailingSlash: true, and a conditional for mobile builds).
+3. Update package.json scripts with a "static" or "mobile-build" script that sets NEXT_PUBLIC_IS_MOBILE=true.
+4. Install the latest Capacitor packages:
+   - @capacitor/cli
+   - @capacitor/core
+   - @capacitor/ios
+   - @capacitor/android
+   - (optional but recommended) @capacitor/splash-screen, @capacitor/status-bar, @capacitor/share, @capacitor/push-notifications
+5. Run `npx cap init` with:
+   - App name: "Placards"
+   - Bundle ID: com.yourcompany.placards (or let me choose one)
+6. Configure capacitor.config.ts (webDir: "out", server for live reload during dev, androidScheme: "https", etc.).
+7. Add iOS and Android platforms.
+8. Give me the exact commands for:
+   - Building the static export
+   - Syncing with Capacitor
+   - Opening in Xcode and Android Studio
+   - Live reload during development (using local IP)
+9. Handle common Lovable/Next.js gotchas:
+   - Image optimization issues
+   - API routes (convert to external API or use static data where possible)
+   - Environment variables
+   - Splash screen & status bar customization for mobile feel
+10. Add basic native plugins I might want (camera, share, notifications, geolocation) with example usage in a React component.
+11. Provide the final folder structure after setup and the commands to build for App Store / Play Store release.
+
+After each major step, pause and show me the exact file changes or terminal commands so I can copy-paste them. Ask for my bundle ID, icons, and splash screen assets when needed. Keep everything clean, production-ready, and follow the official Capacitor + Next.js static export pattern.
+
+Start by asking me: "Do you have the repo cloned locally right now? If yes, what is your desired bundle ID (e.g. com.placards.app)?"
